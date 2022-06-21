@@ -10,8 +10,18 @@
 		c=$a$b	
 		c=$a"xyz"$b
 		c=$a$b.txt
+
+判断路径与文件是否存在
+	判断路径是否存在，否则创建
+		result_name=../../../out
+		if [ ! -d $result_name ];then
+		   mkdir -p $result_name
+		fi
+	判断文件是否存在
+		if [ -e  ./tools/cli/cli ]; then echo "路径存在"; fi 
 		
 			
 我对shell的理解：
 	1、它的用途是把指令都写一块，然后一次性执行了。
 	2、shell脚本的语法与平时写的操作指令差不多。
+	
